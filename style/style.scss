@@ -1,12 +1,4 @@
 
-//colors
-$bcColor: #3A4663;
-$white: #ffffff;
-$gray: #242D44;
-$dark: #181F33;
-$button-color: #EAE3DC;
-
-
 //mixins
 @mixin flexProperty ($horizontal,$vertical,$wrap, $direction) {
     justify-content: $horizontal;
@@ -18,17 +10,6 @@ $button-color: #EAE3DC;
 @mixin dimensions ($width, $height) {
     width: $width;
     height: $height;
-}
-
-@mixin background ($Size, $repeat, $position) {
-    background-size: $bcSize;
-    background-repeat: $repeat;
-    background-position: $position;
-}
-@mixin absolute ($top, $right, $left) {
-    top: $top;
-    right: $right;
-    left: $left;
 }
 @mixin textStyle ($weight, $size, $height, $spacing, $transform, $color) {
     font-weight: $weight;
@@ -51,14 +32,14 @@ html {
         font-family: 'League Spartan', sans-serif;
         @include flexProperty(center,center, unset, column);
         padding: 3rem 2.4rem;
-        background-color: $bcColor;
+        background-color: #3A4663;
         header {
             display: flex;
             @include flexProperty(space-between,center,unset, row);
             width: 100%;
             max-width: 32.7rem;
             h1 {
-                @include textStyle(700, 3.2rem, 2.9rem, -0.053rem, lowercase, $white);
+                @include textStyle(700, 3.2rem, 2.9rem, -0.053rem, lowercase, #ffffff);
                 padding-bottom: -1rem;
             }
             .theme {
@@ -66,13 +47,13 @@ html {
                 @include flexProperty(space-between, center, nowrap,row);
                 gap: 2.6rem;
                 p {
-                    @include textStyle(700, 1.2rem, 1.1rem, 0.1rem, uppercase, $white);
+                    @include textStyle(700, 1.2rem, 1.1rem, 0.1rem, uppercase, #ffffff);
                     margin-top: 2rem;
                 }
                 .toggle-Container {
                     #toggle-switch {
                         @include dimensions(7.1rem, 2.6rem);
-                        background-color: $gray;
+                        background-color: #242D44;
                         border-radius: 1.3rem;
                         padding: 0.5rem;
                         display: flex;
@@ -80,23 +61,33 @@ html {
                         div {
                             @include dimensions(1.6rem, 1.6rem);
                             border-radius: 50%;
+                            cursor: pointer;
                         }
                         .theme1 {
                             background-color: #D03F2F;
                         }
+                        .theme1:hover {
+                            background-color: #F96B5B;
+                        }
                         .theme2 {
                             background-color: #C85402;
-                            //opacity: 0;
+                            opacity: 0;
+                        }
+                        .theme2:hover {
+                            background-color: #FF8A38;
                         }
                         .theme3 {
                             background-color: #00DED0;
-                            //opacity: 0;
+                            opacity: 0;
+                        }
+                        .theme3:hover {
+                            background-color: #93FFF8;
                         }
                     }
                     #theme-numbers {
                         display: flex;
                         @include flexProperty(center, center, nowrap,row);
-                        @include textStyle(500, 1.2rem, 1.1rem, unset, uppercase, $white);
+                        @include textStyle(500, 1.2rem, 1.1rem, unset, uppercase, #ffffff);
                         span {
                             margin: auto 0.8rem;
                             margin-bottom: 0.5rem;
@@ -108,11 +99,11 @@ html {
         #result {
             @include dimensions(100%, 8.8rem);
             max-width: 32.7rem;
-            background-color: $dark;
+            background-color: #181F33;
             border-radius: 1rem;
             margin: 3.2rem 0 2.4rem 0;
             padding: 2.9rem 2.4rem 2.2rem 2.4rem;
-            @include textStyle(500, 4rem, 3.7rem, -0.067rem, uppercase, $white);
+            @include textStyle(500, 4rem, 3.7rem, -0.067rem, uppercase, #ffffff);
             text-align: right;
         }
         .buttons {
@@ -130,18 +121,22 @@ html {
             .button {
                 height: 6.4rem;
                 max-width: 6rem;
-                background-color: $button-color;
+                background-color: #EAE3DC;
                 border-radius: 0.5rem;
                 box-shadow: inset 0rem -0.4rem 0rem  #B3A497;
                 @include textStyle(700, 3.2rem, 100%, -0.053rem, uppercase, #434A59);
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
             }
             #delete, #reset {
                 background-color: #647198;
                 @include textStyle(700, 2.0rem, 10.8rem, -0.033rem, uppercase, #ffffff);
                 box-shadow: inset 0px -0.4rem 0rem  #414E73;
+            }
+            #delete:hover, #reset:hover {
+                background-color: #A2B2E1;
             }
             #x-button {
                 text-transform: lowercase;
@@ -157,7 +152,130 @@ html {
                 @include textStyle(700, 2.0rem, 10.8rem, -0.033rem, uppercase, #ffffff);
                 box-shadow: inset 0px -0.4rem 0rem  #93261A;
             }
+            #equal-sign:hover {
+                background-color: #F96B5B;
+            }
+        }
+    }
+    .third-theme {
+        background-color: #17062A;
+        header {
+            h1 {
+                color: #FFE53D;
+            }
+            .theme {
+                p {
+                    color: #FFE53D;
+                }
+                .toggle-Container {
+                    #toggle-switch {
+                        background-color: #1E0936;
+                    }
+                    #theme-numbers {
+                        color: #FFE53D;
+                    }
+                }
+            }
+        }
+        #result {
+            background-color: #1E0936;
+            color: #FFE53D;
+        }
+        .buttons {
+            background-color: #1E0936;
+            .button {
+                background-color: #331C4D;
+                box-shadow: inset 0rem -0.4rem 0rem  #881C9E;
+                color: #FFE53D;
+            }
+            #delete, #reset {
+                background-color: #56077C;
+                box-shadow: inset 0px -0.4rem 0rem  #BE15F4;
+            }
+            #delete:hover, #reset:hover {
+                background-color: #8631AF;
+            }
+            #equal-sign {
+                background-color: #00DED0;
+                box-shadow: inset 0px -0.4rem 0rem  #6CF9F1;
+            }
+            #equal-sign:hover {
+                background-color: #93FFF8;
+            }
+        }
+    }
+    .second-theme {
+        background-color: #E6E6E6;
+        header {
+            h1 {
+                color: #36362C;
+            }
+            .theme {
+                p {
+                    color: #36362C;
+                }
+                .toggle-Container {
+                    #toggle-switch {
+                        background-color: #D2CDCD;
+                    }
+                    #theme-numbers {
+                        color: #36362C;
+                    }
+                }
+            }
+        }
+        #result {
+            background-color: #EEEEEE;
+            color: #36362C;
+        }
+        .buttons {
+            background-color: #D2CDCD;
+            .button {
+                background-color: #E5E4E1;
+                box-shadow: inset 0rem -0.4rem 0rem  #A79E91;
+                color: #36362C;
+            }
+            #delete, #reset {
+                background-color: #378187;
+                box-shadow: inset 0px -0.4rem 0rem  #1B6066;
+            }
+            #delete:hover, #reset:hover {
+                background-color: #62B5BC;
+            }
+            #equal-sign {
+                background-color: #FF8A38;
+                box-shadow: inset 0px -0.4rem 0rem  #873901;
+            }
+            #equal-sign {
+                background-color: #C85402;
+            }
         }
     }
 }
 
+
+//desktop version styles for above 144rem resolution
+@media only screen and (min-width: 1024px) {
+    html {
+        body {
+            header {
+                max-width: 54rem;
+            }
+            #result {
+                @include dimensions(100%, 12.8rem);
+                max-width: 54rem;
+                padding: 4rem 3.2rem 3.6rem 3.2rem;
+                @include textStyle(500, 5.6rem, 5.2rem, -0.092rem, uppercase, #ffffff);
+            }
+            .buttons {
+                max-width: 54rem;
+                padding: 3.2rem 3.2rem 3.2rem 3rem;
+                gap: 2.4rem;
+                .button {
+                    max-width: 10.1rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}

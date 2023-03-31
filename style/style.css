@@ -68,15 +68,27 @@ html body header .theme .toggle-Container #toggle-switch div {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 html body header .theme .toggle-Container #toggle-switch .theme1 {
   background-color: #D03F2F;
 }
+html body header .theme .toggle-Container #toggle-switch .theme1:hover {
+  background-color: #F96B5B;
+}
 html body header .theme .toggle-Container #toggle-switch .theme2 {
   background-color: #C85402;
+  opacity: 0;
+}
+html body header .theme .toggle-Container #toggle-switch .theme2:hover {
+  background-color: #FF8A38;
 }
 html body header .theme .toggle-Container #toggle-switch .theme3 {
   background-color: #00DED0;
+  opacity: 0;
+}
+html body header .theme .toggle-Container #toggle-switch .theme3:hover {
+  background-color: #93FFF8;
 }
 html body header .theme .toggle-Container #theme-numbers {
   display: flex;
@@ -139,6 +151,7 @@ html body .buttons .button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 html body .buttons #delete, html body .buttons #reset {
   background-color: #647198;
@@ -149,6 +162,9 @@ html body .buttons #delete, html body .buttons #reset {
   text-transform: uppercase;
   color: #ffffff;
   box-shadow: inset 0px -0.4rem 0rem #414E73;
+}
+html body .buttons #delete:hover, html body .buttons #reset:hover {
+  background-color: #A2B2E1;
 }
 html body .buttons #x-button {
   text-transform: lowercase;
@@ -168,4 +184,116 @@ html body .buttons #equal-sign {
   text-transform: uppercase;
   color: #ffffff;
   box-shadow: inset 0px -0.4rem 0rem #93261A;
+}
+html body .buttons #equal-sign:hover {
+  background-color: #F96B5B;
+}
+html .third-theme {
+  background-color: #17062A;
+}
+html .third-theme header h1 {
+  color: #FFE53D;
+}
+html .third-theme header .theme p {
+  color: #FFE53D;
+}
+html .third-theme header .theme .toggle-Container #toggle-switch {
+  background-color: #1E0936;
+}
+html .third-theme header .theme .toggle-Container #theme-numbers {
+  color: #FFE53D;
+}
+html .third-theme #result {
+  background-color: #1E0936;
+  color: #FFE53D;
+}
+html .third-theme .buttons {
+  background-color: #1E0936;
+}
+html .third-theme .buttons .button {
+  background-color: #331C4D;
+  box-shadow: inset 0rem -0.4rem 0rem #881C9E;
+  color: #FFE53D;
+}
+html .third-theme .buttons #delete, html .third-theme .buttons #reset {
+  background-color: #56077C;
+  box-shadow: inset 0px -0.4rem 0rem #BE15F4;
+}
+html .third-theme .buttons #delete:hover, html .third-theme .buttons #reset:hover {
+  background-color: #8631AF;
+}
+html .third-theme .buttons #equal-sign {
+  background-color: #00DED0;
+  box-shadow: inset 0px -0.4rem 0rem #6CF9F1;
+}
+html .third-theme .buttons #equal-sign:hover {
+  background-color: #93FFF8;
+}
+html .second-theme {
+  background-color: #E6E6E6;
+}
+html .second-theme header h1 {
+  color: #36362C;
+}
+html .second-theme header .theme p {
+  color: #36362C;
+}
+html .second-theme header .theme .toggle-Container #toggle-switch {
+  background-color: #D2CDCD;
+}
+html .second-theme header .theme .toggle-Container #theme-numbers {
+  color: #36362C;
+}
+html .second-theme #result {
+  background-color: #EEEEEE;
+  color: #36362C;
+}
+html .second-theme .buttons {
+  background-color: #D2CDCD;
+}
+html .second-theme .buttons .button {
+  background-color: #E5E4E1;
+  box-shadow: inset 0rem -0.4rem 0rem #A79E91;
+  color: #36362C;
+}
+html .second-theme .buttons #delete, html .second-theme .buttons #reset {
+  background-color: #378187;
+  box-shadow: inset 0px -0.4rem 0rem #1B6066;
+}
+html .second-theme .buttons #delete:hover, html .second-theme .buttons #reset:hover {
+  background-color: #62B5BC;
+}
+html .second-theme .buttons #equal-sign {
+  background-color: #FF8A38;
+  box-shadow: inset 0px -0.4rem 0rem #873901;
+}
+html .second-theme .buttons #equal-sign {
+  background-color: #C85402;
+}
+
+@media only screen and (min-width: 1024px) {
+  html body header {
+    max-width: 54rem;
+  }
+  html body #result {
+    width: 100%;
+    height: 12.8rem;
+    max-width: 54rem;
+    padding: 4rem 3.2rem 3.6rem 3.2rem;
+    font-weight: 500;
+    font-size: 5.6rem;
+    line-height: 5.2rem;
+    letter-spacing: -0.092rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  html body .buttons {
+    max-width: 54rem;
+    padding: 3.2rem 3.2rem 3.2rem 3rem;
+    gap: 2.4rem;
+  }
+  html body .buttons .button {
+    max-width: 10.1rem;
+    border-radius: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
